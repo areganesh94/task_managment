@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Edit_Profile</title>
+{% endblock %}
+
+
+{% block body %}
+<form method="POST">{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Submit</button>
+</form>
+{% endblock %}
+
